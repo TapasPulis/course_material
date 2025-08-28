@@ -98,6 +98,75 @@
           <td>Expert</td>
         </tbody>
       </table>
+    <!-- * form -->
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Project Details</legend>
+          <label for="worktype">What type of work do you need?*</label>
+          <select id="worktype" name="worktype" required>
+            <option value="choose your reason" selected disabled>
+              Choose your reason
+            </option>
+            <option value="website">Website</option>
+            <option value="web app">Web App</option>
+            <option value="bug fixes">Bug Fixes</option>
+            <option value="consulation">Consulation</option>
+          </select>
+          <br>
+          <label for="technologies">What technologies are involved?</label>
+            <br>
+            <input type="checkbox" name="html">HTML</input>
+            <br>
+            <input type="checkbox" name="css">CSS</input>
+            <br>
+            <input type="checkbox" name="javascript">JavaScript</input>
+            <br>
+            <input type="checkbox" name="react">React</input>
+            <br>
+            <input type="checkbox" name="node.js">Node.js</input>
+            <br>
+            <label for="description">Describe your project:</label>
+            <br>
+            <textarea 
+            id="description" 
+            name="description" 
+            rows="7" 
+            cols="15" 
+            placeholder="Describe your project here...">
+            </textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Budget & Timeline*</legend>
+          <input type="number" name="budget" placeholder="Budget ($)" required></input>
+          <br><br>
+          <label for="urgency">How urgent do you want the project to be done?</label>
+          <br>
+          <input type="radio" name="urgency" value="radio">ASAP</input>
+          <br>
+          <input type="radio" name="urgency" value="radio">Within 2 weeks</input>
+          <br>
+          <input type="radio" name="urgency" value="radio">Flexible</input>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Information</legend>
+          <label for="fullname">Full Name:*</label>
+          <br>
+          <input type="text" id="fullname" name="fullname" placeholder="Your fullname here..." required></input>
+          <br><br>
+          <label for="email">Email:*</label>
+          <br>
+          <input type="email" id="email" name="email" placeholder="Your email here..." required></input>
+          <br><br>
+          <label for="company">Company or Organization:</label>
+          <br>
+          <input type="text" id="company" name="company" placeholder="Your company or organization here...(optional)"></input>
+          <br><br>
+        </fieldset>
+        <br>
+        <button type="submit">Send Request</button>
+      </form>
     </main>
     <!-- * Footer -->
     <footer>
