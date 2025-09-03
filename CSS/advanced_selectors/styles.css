@@ -1,25 +1,35 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+#main-title {
+  color: green;
 }
 
-:root {
-  --primary-color: white;
-  --card-bg: gray;
-  --card-padding: 2rem;
-  --card-radius: 8px;
-  --card-position: center;
-  --card-margin: 170px auto;
+p {
+  font-size: 18px;
 }
 
-.card {
-  color: var(--primary-color);
-  background-color: var(--card-bg);
-  padding: var(--card-padding);
-  border-radius: var(--card-radius);
-  text-align: var(--card-position);
-  margin: var(--card-margin);
-  height: 400px;
-  width: 400px;
+.animals > ul {
+  list-style-type: circle;
+}
+
+.animals > ul li:first-child {
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.intro {
+  font-style: italic;
+}
+
+.animals > ul li:nth-child(even) {
+  background-color: lightgray;
+}
+
+footer p {
+  border: solid red;
+}
+
+.animals > ul:first-of-type li::before {
+  content: "🐒 ";
 }
