@@ -1,24 +1,139 @@
-#navbar {
-  background-color: #f4f4f4;
+:root {
+  /* ! 🎨 Colors — replace these with your own palette */
+  --bg: #222; /* Background color of the page */
+  --text: #f7f7fb; /* Default text color */
+  --primary: #2563eb; /* Main accent (links, buttons) */
+  --secondary: #6b7280; /* Secondary text/elements */
+  --accent: #0f2963; /* Highlight / accent color */
+  --muted: #6b7280; /* Muted / less important text */
+
+  /* ! ✍️ Typography — replace font sizes if you like */
+  --font-base: 16px; /* Base size → 1rem = 16px */
+  --font-body: 1rem; /* Paragraphs */
+  --font-h1: 2rem; /* Big heading (32px) */
+  --font-h2: 1.5rem; /* Medium heading (24px) */
+
+  /* 📐 Spacing — use rem so it scales with base size */
+  --space-1: 0.5rem; /* Small spacing (~8px) */
+  --space-2: 1rem; /* Normal spacing (~16px) */
+  --space-3: 1.5rem; /* Large spacing (~24px) */
+
+  /* 🔲 Borders — radius for rounded corners */
+  --border-radius: 0.25rem; /* Small rounded corners */
+  --border-color: #eee; /* Light border color */
+
+  /* 🌑 Shadows — use for cards, buttons, etc. */
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* 📏 Sections — default height (full screen) */
+  --section-height: 100vh;
 }
-#navbar ul li {
-  list-style-type: none;
-  display: inline-block;
-  text-align: right;
+
+/* =========================
+2) RESET / DEFAULTS
+   ========================= */
+
+/* Remove margin/padding on everything and set box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#navbar a {
-  color: #1e1e1e;
-  text-decoration: none;
+
+/* Base font-size → controls rem math */
+html {
+  font-size: var(--font-base);
 }
-#navbar h1 {
-  color: #1e1e1e;
+
+/* Make images responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
+
+/* Remove list bullets/numbers */
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================
+3) BASE ELEMENTS
+   ========================= */
+
+/* Page background + base text setup */
 body {
-  background-color: #1e1e1e;
+  background: var(--bg); /* Background color */
+  color: var(--text); /* Text color */
+  font-size: var(--font-body); /* Base text size */
+  line-height: 1.6; /* Comfy line spacing */
+  font-family: sans-serif; /* Default font (replace with Google Fonts if you want) */
 }
-#about > header {
-  color: #f4f4f4;
+
+/* Headings (h1–h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif; /* Replace with your choice */
+  font-weight: bold;
+  line-height: 1.2; /* Tight line spacing for titles */
+  margin-bottom: var(--space-2); /* Add spacing below headings */
 }
-#about > p {
-  color: #f4f4f4;
+
+/* Specific heading sizes */
+h1 {
+  font-size: var(--font-h1);
+}
+h2 {
+  font-size: var(--font-h2);
+}
+
+/* Paragraphs */
+p {
+  font-family: Arial, Helvetica, sans-serif; /* Replace if you like */
+  margin-bottom: var(--space-2); /* Spacing after each paragraph */
+}
+
+/* Links */
+a {
+  color: var(--primary); /* Uses primary color */
+  text-decoration: none; /* No underline by default */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.hero {
+  height: 100vh;
+  background-color: purple;
+  padding: var(--space-3);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: var(--font-h1);
+  margin-bottom: var(--space-2);
+}
+
+.hero p {
+  max-width: 300ch;
+}
+
+.hero .btn {
+  background-color: var(--primary);
+  border-color: var(--accent);
+  color: white;
+  padding: 0.75em;
+  border-radius: var(--border-radius);
+  transition: background-color 300ms ease;
+}
+
+.hero .btn:hover {
+  background-color: var(--accent);
+  text-decoration: none;
 }
