@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 10px;
+  background: #eee;
+  height: 100vh;
+  place-content: center;
+}
+
+.item {
+  display: flex;
+  background: lightcoral;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  justify-items: right;
+  align-items: end;
+}
+
+.item5 {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
