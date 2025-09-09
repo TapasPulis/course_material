@@ -1,0 +1,33 @@
+:root {
+  --headings-font: "Nunito", sans-serif;
+  --body-font: "Roboto Condensed", Arial, sans-serif;
+  --body-font-size: 1rem;
+  --body-line-height: 1.6;
+  --body-text-alignment: justify;
+  --heading-font-size: 2rem;
+  --heading-font-weight: bold;
+  --note-font-style: italic;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: var(--headings-font);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+}
+
+p {
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  text-align: var(--body-text-alignment);
+}
+
+main .note {
+  font-style: var(--note-font-style);
+}
