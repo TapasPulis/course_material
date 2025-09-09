@@ -55,6 +55,18 @@
   overflow-y: auto;
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.box {
+  background-color: #ed6d52;
+  padding: 15px;
+  border-radius: 8px;
+}
+
 .advertisement {
   grid-area: advertisement;
   background-color: #e18182;
