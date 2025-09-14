@@ -50,85 +50,96 @@ header nav .items a:hover {
 }
 
 /* Hero section Styles */
-.hero h1,
+#hero h1,
 h3 {
   color: var(--primary-color);
   font-family: var(--hero-font);
   text-align: center;
 }
 
-.hero h1 {
+#hero h1 {
   margin-top: 1rem;
   font-size: 2.5rem;
 }
 
-.hero h3 {
+#hero h3 {
   margin-bottom: 1rem;
 }
 
-.hero img {
+#hero img {
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 }
 
 /* About section Styles */
 
-.about {
+#about {
   color: var(--primary-color);
   font-family: var(--primary-font);
-  margin-bottom: 3rem;
+  margin-bottom: 7rem;
 }
-.about h2 {
+#about h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
-.about hr {
-  margin-bottom: 2rem;
-}
-/* Projects section Styles */
 
-.projects h2 {
-  color: var(--primary-color);
-  font-family: var(--primary-font);
+#about hr {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+#about p {
+  font-size: 1rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-.projects > .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+/* Projects section Styles */
+
+#projects h2 {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
-.projects .project img {
+#projects > .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-bottom: 10rem;
+}
+
+#projects .project img {
   width: 100%;
   height: auto;
 }
 
-.projects .project button {
+#projects .project button {
   color: var(--primary-color);
   transition: all 0.3s ease-in-out;
   border: none;
 }
 
-.projects .project button:hover {
+#projects .project button:hover {
   cursor: pointer;
   transform: scale(1.02);
 }
 
 /* Contact section Styles */
 
-.contact {
+#contact {
   color: var(--primary-color);
   font-family: var(--primary-font);
-  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
-.contact h2 {
+#contact h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.contact form {
+#contact form {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -138,7 +149,7 @@ h3 {
   margin-bottom: 5rem;
 }
 
-.contact form input {
+#contact form input {
   font-size: 1rem;
   font-family: var(--primary-font);
   border: none;
@@ -146,7 +157,7 @@ h3 {
   outline: none;
 }
 
-.contact form textarea {
+#contact form textarea {
   font-size: 1rem;
   font-family: var(--primary-font);
   border: none;
@@ -156,7 +167,7 @@ h3 {
   outline: none;
 }
 
-.contact form input[type="submit"] {
+#contact form input[type="submit"] {
   border: 1px solid var(--primary-color);
   border-radius: 0.2rem;
   background-color: white;
@@ -168,7 +179,7 @@ h3 {
   transition: background-color 0.3s ease-in-out;
 }
 
-.contact form input[type="submit"]:hover {
+#contact form input[type="submit"]:hover {
   cursor: pointer;
   background-color: rgba(109, 106, 106, 0.71);
 }
@@ -190,6 +201,28 @@ footer .social_icons {
 }
 
 footer .social_icons img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  header .items > ul {
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header .items > ul {
+    font-size: clamp(0.7rem, 1.2vw, 1.2rem);
+  }
+  #hero {
+    margin-bottom: 5rem;
+  }
+  #contact form {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
 }
