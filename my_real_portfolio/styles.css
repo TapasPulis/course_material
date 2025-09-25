@@ -51,11 +51,14 @@ header nav .items a:hover {
 }
 
 /* Hero section Styles */
+
+#hero {
+  text-align: center;
+}
 #hero h1,
 h3 {
   color: var(--primary-color);
   font-family: var(--hero-font);
-  text-align: center;
 }
 
 #hero h1 {
@@ -64,11 +67,16 @@ h3 {
 }
 
 #hero h3 {
-  margin-bottom: 1rem;
+  margin-bottom: 7rem;
 }
 
 #hero img {
-  width: 100%;
+  width: 70vw;
+  height: 45vh;
+  max-width: 320px;
+  border-radius: 100%;
+  border: 1px solid black;
+  object-fit: cover;
   margin-bottom: 7rem;
 }
 
@@ -213,6 +221,7 @@ footer .social_icons img {
   header .items > ul {
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   }
+
   #contact form {
     margin-left: 15%;
     margin-right: 15%;
@@ -226,6 +235,7 @@ footer .social_icons img {
   #hero {
     padding: 0 1rem;
   }
+
   #about {
     padding: 0 1rem;
   }
