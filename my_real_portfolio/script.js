@@ -67,6 +67,7 @@ contactFormSubmit.addEventListener("click", (event) => {
 
   setTimeout(() => {
     submitFeedback.textContent = "";
+    submitFeedback.style.color = "black";
     contactForm.reset();
   }, 3000);
 });
