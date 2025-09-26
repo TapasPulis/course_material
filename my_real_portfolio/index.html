@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>My Portfolio | Samragya Gurung</title>
   </head>
   <body>
@@ -40,17 +40,13 @@
           src="./assets/profile_placeholder.jpg"
           alt="This is a placeholder for my profile picture"
         />
+        <p id="introText"></p>
       </section>
 
       <section id="about">
         <h2>About me</h2>
         <hr />
-        <p></p>
-        <p>
-          Hi, I'm Samragya Gurung — a passionate and dedicated aspiring web
-          developer with a strong interest in building dynamic, responsive, and
-          user-focused websites and applications.
-        </p>
+        <p id="aboutMeText"></p>
         <p>
           I'm currently studying full stack development, where I’m learning to
           work across both front-end and back-end technologies. From crafting
@@ -74,6 +70,13 @@
           what I’ve been building on my journey to becoming a full stack web
           developer.
         </p>
+        <hr />
+      </section>
+
+      <section id="skills">
+        <h2>My Skills</h2>
+        <hr />
+        <ul id="skillsList"></ul>
         <hr />
       </section>
 
@@ -137,15 +140,26 @@
 
       <section id="contact">
         <h2>Contact Me</h2>
-        <form action="URL" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
+        <form id="contactForm">
+          <input
+            id="formName"
+            type="text"
+            name="name"
+            placeholder="Your Name"
+          />
+          <input
+            id="formEmail"
+            type="email"
+            name="email"
+            placeholder="Your Email"
+          />
           <textarea
+            id="formMsg"
             name="message"
             placeholder="Your Message"
-            required
           ></textarea>
-          <input type="submit" value="Send" />
+          <input id="contactFormSubmit" type="submit" value="Send" />
+          <p id="submitFeedback"></p>
         </form>
       </section>
     </main>
@@ -165,5 +179,6 @@
         /></a>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
