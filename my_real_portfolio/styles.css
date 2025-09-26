@@ -300,6 +300,7 @@ footer .social_icons img {
   #hero h3,
   #about h2,
   #about p,
+  #skills,
   #projects h2,
   #contact h2,
   #contact form input,
@@ -307,6 +308,7 @@ footer .social_icons img {
   footer p {
     color: var(--primary-color);
   }
+
   #contact form input {
     font-size: 1rem;
     background-color: rgb(54, 53, 53);

@@ -1,11 +1,11 @@
 // * Welcome message
 
 const myName = "Samragya Gurung";
-const myRoll = "Fullstack Developer";
+const myRole = "Fullstack Developer";
 
 const introText = document.getElementById("introText");
 
-introText.innerText = `My name is ${myName}. I am a ${myRoll}. Welcome to my Portfolio!`;
+introText.innerText = `My name is ${myName}. I am a ${myRole}. Welcome to my Portfolio!`;
 
 // * Skills list
 const skillsList = document.getElementById("skillsList");
@@ -51,7 +51,7 @@ console.log(personalInfo());
 
 const contactForm = document.getElementById("contactForm");
 const formName = document.getElementById("formName");
-const formEmail = document.getElementById("formEmail");
+const formEmail = document.getElementBd("yIformEmail");
 const formMsg = document.getElementById("formMsg");
 const contactFormSubmit = document.getElementById("contactFormSubmit");
 const submitFeedback = document.getElementById("submitFeedback");
