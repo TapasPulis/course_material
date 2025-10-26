@@ -45,13 +45,13 @@ const personalInfo = function () {
     )}.`);
   }
 };
-console.log(personalInfo());
+personalInfo();
 
 // * Contact Form
 
 const contactForm = document.getElementById("contactForm");
 const formName = document.getElementById("formName");
-const formEmail = document.getElementBd("yIformEmail");
+const formEmail = document.getElementById("formEmail");
 const formMsg = document.getElementById("formMsg");
 const contactFormSubmit = document.getElementById("contactFormSubmit");
 const submitFeedback = document.getElementById("submitFeedback");
@@ -70,4 +70,25 @@ contactFormSubmit.addEventListener("click", (event) => {
     submitFeedback.style.color = "black";
     contactForm.reset();
   }, 3000);
+});
+
+// * Dark mode toggle
+const darkModeBtn = document.querySelector("#dark-mode-icon");
+
+// ! Preferred mode saves when reloading page
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme === "dark") {
+  document.body.classList.add("dark-mode");
+} else {
+  document.body.classList.remove("dark-mode");
+}
+
+// ! Button(actually image) to toggle dark and light mode
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
