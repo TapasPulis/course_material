@@ -4,6 +4,9 @@
   --hero-font: "Oswald", serif;
   --secondary-color: white;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   padding: 0;
@@ -52,7 +55,11 @@ header nav .items a:hover {
 }
 
 /* Dark mode icon styling*/
-
+header .items ul li button {
+  background: none;
+  border: none;
+  font-size: inherit; /* Makes the button have the same font size as the parent element, in this case li which itself inherits from ul*/
+}
 header .items ul li img {
   height: 1.5em;
   width: 1.5em;
@@ -99,6 +106,22 @@ h3 {
   font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
+/* Back to top button styling */
+#to-top-btn {
+  position: fixed;
+  bottom: 3.5em;
+  right: 1em;
+  z-index: 9999; /* Makes sure that its above other elements so the footer and the projects section doesn't overlap it */
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+#to-top-btn img {
+  width: 20px;
+  height: 20px;
+  border: none;
+  display: block;
+}
 /* About section Styles */
 
 #about {

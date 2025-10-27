@@ -73,7 +73,7 @@ contactFormSubmit.addEventListener("click", (event) => {
 });
 
 // * Dark mode toggle
-const darkModeBtn = document.querySelector("#dark-mode-icon");
+const darkModeBtn = document.querySelector("#dark-mode-btn");
 
 // ! Preferred mode saves when reloading page
 const currentTheme = localStorage.getItem("theme");
@@ -83,7 +83,7 @@ if (currentTheme === "dark") {
   document.body.classList.remove("dark-mode");
 }
 
-// ! Button(actually image) to toggle dark and light mode
+// ! Button to toggle dark and light mode
 darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
   if (document.body.classList.contains("dark-mode")) {
@@ -91,4 +91,21 @@ darkModeBtn.addEventListener("click", () => {
   } else {
     localStorage.setItem("theme", "light");
   }
+});
+
+// * Scroll to top button
+const toTopBtn = document.querySelector("#to-top-btn");
+
+// ! When scrolling down 200px from the top of the document, show the button. documentElement refers to the <html> element inside the DOM.
+window.onscroll = () => {
+  if (document.documentElement.scrollTop > 200) {
+    toTopBtn.style.display = "block";
+  } else {
+    toTopBtn.style.display = "none";
+  }
+};
+
+// ! When the user clicks on the button, scroll to the top of the document
+toTopBtn.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0;
 });
