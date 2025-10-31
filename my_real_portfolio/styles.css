@@ -193,7 +193,7 @@ h3 {
   text-align: center;
 }
 
-#projects > #container {
+#projects > #projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-bottom: 10rem;
