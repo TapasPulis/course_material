@@ -119,3 +119,55 @@ the myLinks div, basically allowing the user to open the mobile menu with the he
 mobileMenu.addEventListener("click", () => {
   myLinks.classList.toggle("open");
 });
+
+// * Dynamically rendering project section
+// ! This is an array of objects containing all the projects containing image, alt text and link(this one for the future)
+const projects = [
+  {
+    image: "./assets/project_placeholder.jpg",
+    alt: "This is a placeholder image for my projects",
+    link: "#",
+  },
+  {
+    image: "./assets/second_project_placeholder.jpg",
+    alt: "This is a placeholder image for my projects",
+    link: "#",
+  },
+  {
+    image: "./assets/project_placeholder.jpg",
+    alt: "This is a placeholder image for my projects",
+    link: "#",
+  },
+  {
+    image: "./assets/second_project_placeholder.jpg",
+    alt: "This is a placeholder image for my projects",
+    link: "#",
+  },
+  {
+    image: "./assets/project_placeholder.jpg",
+    alt: "This is a placeholder image for my projects",
+    link: "#",
+  },
+  {
+    image: "./assets/second_project_placeholder.jpg",
+    alt: "This is a placeholder image for my projects",
+    link: "#",
+  },
+];
+
+const projectsContainer = document.querySelector("#projects-container");
+
+// ! This loops through the projects array
+projects.forEach((project) => {
+  const projectDiv = document.createElement("div"); // This div will be created once for every project since this is a loop. It will contain the projects. So the first in the first iteration of the loop the div will contain the first project. Then in the second iteration a new div is created which contains project 2 and so on...
+  projectDiv.classList.add("project"); // This adds the project class that exists in CSS to the div so that the styling can be applied. NOTE: This class and the element in this loop are both called "project" but they are two different things. That's why the class has "" around it.
+
+  // Here I access the html of the div and create a button and an img inside the button and use the image and alt values from my projects array
+  projectDiv.innerHTML = `
+    <button>
+      <img src="${project.image}" alt="${project.alt}" />
+    </button>
+  `;
+
+  projectsContainer.appendChild(projectDiv); // This appends the div to my projects-container so that it appears on my site
+});
