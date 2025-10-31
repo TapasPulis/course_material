@@ -34,23 +34,34 @@ header nav .home {
 header nav .home:hover {
   color: rgba(109, 106, 106, 0.71);
 }
-
-header .items > ul {
-  font-size: clamp(1rem, 1.8vw, 2rem);
+header .items {
   display: flex;
-  list-style: none;
-  margin-left: 5rem;
+  align-items: center;
   gap: 1rem;
 }
-
-header nav .items a {
+header .items ul {
+  font-size: clamp(1rem, 1.8vw, 2rem);
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: none;
+  padding: 0;
+}
+header nav .items #myLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav .items #myLinks a {
+  display: none;
+  font-size: clamp(1rem, 1.8vw, 2rem);
   text-decoration: none;
   color: var(--nav-color);
   font-family: var(--primary-font);
   transition: text-decoration 0.3s ease;
 }
 
-header nav .items a:hover {
+header nav .items #myLinks a:hover {
   text-decoration: underline;
 }
 
@@ -60,15 +71,26 @@ header .items ul li button {
   border: none;
   font-size: inherit; /* Makes the button have the same font size as the parent element, in this case li which itself inherits from ul*/
 }
-header .items ul li img {
-  height: 1.5em;
-  width: 1.5em;
+
+header .items ul li #dark-mode-btn {
+  display: block;
+}
+header .items ul li #dark-mode-btn img {
+  height: 1.4em;
+  width: 1.4em;
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
-header .items ul li img:hover {
+header .items ul li #dark-mode-btn img:hover {
   opacity: 1;
+}
+
+/* Mobile menu toggle button styling*/
+
+header .items ul li #mobile-menu img {
+  height: 2em;
+  width: 2em;
 }
 
 /* Hero section Styles */
@@ -276,9 +298,6 @@ footer .social_icons img {
 
 /* Responsive Styles */
 @media only screen and (max-width: 600px) {
-  header .items > ul {
-    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
-  }
   #skills li {
     font-size: clamp(1.2rem, 2vw, 3rem);
   }
@@ -286,12 +305,55 @@ footer .social_icons img {
     margin-left: 15%;
     margin-right: 15%;
   }
+  header nav {
+    display: flex;
+    margin-bottom: 6rem;
+  }
+  header nav .items #myLinks {
+    max-height: 0; /* Makes it so that the max-height for the menu 0 which makes the menu invisible even though it exists in the DOM*/
+    flex-direction: column;
+    position: absolute;
+    width: 100%; /* Makes the myLinks container take the whole width of the screen*/
+    left: 0;
+    top: 4rem;
+    margin-top: 1rem;
+    background: rgb(239, 239, 239);
+    transition: max-height 0.7s ease;
+  }
+  header nav .items #myLinks a {
+    display: block;
+    padding: 8px;
+    overflow: hidden;
+  }
+  header nav .items #myLinks a:hover {
+    text-decoration: none;
+    background: rgb(204, 202, 202);
+    width: 100%; /* Makes the links take the whole width of the container*/
+    text-align: center;
+  }
+  header nav .items ul li #dark-mode-btn {
+    display: block;
+  }
+
+  header nav .items #myLinks.open {
+    max-height: 300px; /* When the open class is toggled through js the max-height of the menu is increased which makes the menu visible*/
+  }
+
+  .dark-mode header nav .items #myLinks {
+    background: rgb(116, 114, 114);
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  header nav .items #myLinks a {
+    display: block;
+  }
+  header nav .items ul li #mobile-menu {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-  header .items > ul {
-    font-size: clamp(0.95rem, 3vw, 4rem);
-  }
   #hero {
     padding: 0 1rem;
   }

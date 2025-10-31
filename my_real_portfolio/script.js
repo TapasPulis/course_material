@@ -109,3 +109,13 @@ window.onscroll = () => {
 toTopBtn.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
+
+// * Mobile menu toggle navbar
+const mobileMenu = document.querySelector("#mobile-menu");
+const myLinks = document.querySelector("#myLinks");
+
+/* When the user clicks the mobile menu toggle button the open class is toggled to 
+the myLinks div, basically allowing the user to open the mobile menu with the help of css */
+mobileMenu.addEventListener("click", () => {
+  myLinks.classList.toggle("open");
+});
