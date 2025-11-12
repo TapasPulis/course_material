@@ -75,3 +75,5 @@ node_modules/
 
 # DynamoDB Local files
 .dynamodb/
+
+/dist
