@@ -1,10 +1,10 @@
-import PersonalGreetingCard from "./components/personal_greeting_card_exercise/personal.greeting.card";
+import UserCard from "./components/user_list_rendering_exercise/user.card";
 
 function App() {
   return (
     <div className="">
       <h1>State in React</h1>
-      <PersonalGreetingCard />
+      <UserCard />
     </div>
   );
 }
