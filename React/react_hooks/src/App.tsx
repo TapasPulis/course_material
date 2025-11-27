@@ -17,6 +17,7 @@ function App() {
   function handleClick() {
     console.log("Button clicked");
   }
+
   return (
     <div className="">
       <h1>State in React</h1>
